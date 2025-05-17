@@ -9,15 +9,14 @@ import { MovieDetails } from './Pages/MovieDetails'
 import { WatchList } from './Pages/WatchList'
 
 function App() {
-  const [watchlist, setWatchlist] = useState({})
 
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<MoviesList watchlist={watchlist} setWatchlist={setWatchlist} />} />
+        <Route path="/" element={<MoviesList />} />
         <Route path="/movie" element={<MovieDetails />} />
-        <Route path="/watchlist" element={<WatchList watchlist={watchlist} setWatchlist={setWatchlist}/>} />
+        <Route path="/watchlist" element={<WatchList/>} />
       </Routes>
     </BrowserRouter>
   )
